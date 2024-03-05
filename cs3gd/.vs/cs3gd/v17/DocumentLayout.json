@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\Git Clones\\cs3gd\\cs3gd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AgentController.cs",
+              "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\AgentController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\AgentController.cs",
+              "ToolTip": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\AgentController.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\AgentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T19:36:40.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\_Scripts\\PlayerController.cs",
