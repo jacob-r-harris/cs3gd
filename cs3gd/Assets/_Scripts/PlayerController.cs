@@ -16,18 +16,21 @@ public class PlayerController : MonoBehaviour
     private float verticalIn;
     private Vector3 moveDirection;
     private Rigidbody rb;
-
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // check if player is on the ground. If so, add drag.
+    
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, ground);
         input();
 
@@ -37,6 +40,9 @@ public class PlayerController : MonoBehaviour
         } else {
             rb.drag = 0;
         }
+
+        // Animate player
+        animator.SetFloat("speed", Vector3.Magnitude(rb.velocity));
     }
 
     private void FixedUpdate(){
@@ -53,7 +59,5 @@ public class PlayerController : MonoBehaviour
         moveDirection = orientation.forward * verticalIn + orientation.right * horizontalIn;
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
-
     }
 }
