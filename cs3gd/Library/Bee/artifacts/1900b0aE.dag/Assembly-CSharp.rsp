@@ -361,7 +361,9 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Mini Simple Characters Skeleton Demo/Readme/Scripts/Readme.cs"
 "Assets/_Scripts/AgentController.cs"
+"Assets/_Scripts/AttackController.cs"
 "Assets/_Scripts/CameraController.cs"
+"Assets/_Scripts/HitBoxController.cs"
 "Assets/_Scripts/HudController.cs"
 "Assets/_Scripts/PlayerController.cs"
 -langversion:9.0

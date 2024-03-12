@@ -19,13 +19,15 @@ public class AgentController : MonoBehaviour
 	private Transform target;
 	[SerializeField]
 	private float stopDist = 2;
+	[SerializeField]
+	private float attackDist = 7;
 
 
 	void Awake()
 	{
 		speedHashId    = Animator.StringToHash ("walkingSpeed");
 		navMeshAgent   = GetComponent<NavMeshAgent>();
-		animController = GetComponent<Animator>();
+		animController = GetComponentInChildren<Animator>();
 		navMeshAgent.stoppingDistance = stopDist;
 		
 
@@ -49,6 +51,13 @@ public class AgentController : MonoBehaviour
 	{
 		navMeshAgent.SetDestination(target.position);
 		animController.SetFloat("speed", navMeshAgent.velocity.magnitude);
+
+		float distanceFromTarget = Vector3.Distance(navMeshAgent.transform.position, target.position);
+
+		if (distanceFromTarget < attackDist)
+		{
+			animController.SetTrigger("attack");
+		}
 	}
 
 	void Idle() 

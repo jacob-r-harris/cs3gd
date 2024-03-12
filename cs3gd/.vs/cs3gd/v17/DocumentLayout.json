@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|G:\\Git Clones\\cs3gd\\cs3gd\\assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -43,8 +43,7 @@
               "RelativeToolTip": "Assets\\_Scripts\\PlayerController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T13:16:30.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T13:16:30.468Z"
             }
           ]
         }
