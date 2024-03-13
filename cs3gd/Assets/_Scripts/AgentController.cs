@@ -21,6 +21,8 @@ public class AgentController : MonoBehaviour
 	private float stopDist = 2;
 	[SerializeField]
 	private float attackDist = 7;
+	private double timeSinceLastAttack;
+	public float attackSpeed;
 
 
 	void Awake()
@@ -39,6 +41,10 @@ public class AgentController : MonoBehaviour
 
 	void Update()
 	{
+		if (animController.GetCurrentAnimatorStateInfo(1).IsName("Attack")){
+			gameObject.BroadcastMessage("attacking");
+		}
+
 		if (state == AgentState.Idle)
 			Idle ();
 		else if (state == AgentState.Patrolling)
@@ -54,8 +60,9 @@ public class AgentController : MonoBehaviour
 
 		float distanceFromTarget = Vector3.Distance(navMeshAgent.transform.position, target.position);
 
-		if (distanceFromTarget < attackDist)
+		if (distanceFromTarget < attackDist && Time.timeAsDouble - timeSinceLastAttack >= attackSpeed)
 		{
+			timeSinceLastAttack = Time.timeAsDouble;
 			animController.SetTrigger("attack");
 		}
 	}

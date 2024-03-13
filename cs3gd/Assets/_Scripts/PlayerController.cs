@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float groundDrag;
+    public float rollDrag;
     public float playerHeight;
     public LayerMask ground;
     bool grounded;
     public Transform orientation;
     private float horizontalIn;
     private float verticalIn;
+    private bool spacebar;
     private Vector3 moveDirection;
     private Rigidbody rb;
     private Animator animator;
@@ -41,17 +43,24 @@ public class PlayerController : MonoBehaviour
             rb.drag = 0;
         }
 
+        if (spacebar && !animator.GetCurrentAnimatorStateInfo(1).IsName("Roll")){
+            gameObject.BroadcastMessage("roll");
+        }
+
         // Animate player
         animator.SetFloat("speed", Vector3.Magnitude(rb.velocity));
     }
 
     private void FixedUpdate(){
+        if (grounded){
         movePlayer();
+        }
     }
 
     private void input(){
         horizontalIn = Input.GetAxisRaw("Horizontal");
         verticalIn = Input.GetAxisRaw("Vertical");
+        spacebar = Input.GetKeyDown("space");
     }
 
     private void movePlayer(){
@@ -59,5 +68,13 @@ public class PlayerController : MonoBehaviour
         moveDirection = orientation.forward * verticalIn + orientation.right * horizontalIn;
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+    }
+
+    private void roll()
+    {
+        animator.SetTrigger("roll");
+        rb.drag = rollDrag;
+        moveDirection = orientation.forward * verticalIn + orientation.right * horizontalIn;
+        rb.AddForce(moveDirection.normalized * moveSpeed * 100f);
     }
 }

@@ -32,7 +32,20 @@ public class HitBoxController : MonoBehaviour
         {
             lastHit = Time.time;
             hurtSound.Play();
-            hitBox.enabled = false;
+
+            if (hitBox.enabled)
+            {
+                hitBox.enabled = false;
+            }
         }
+    }
+
+    private void roll(){
+        lastHit = Time.time;
+
+        if (hitBox.enabled)
+            {
+                hitBox.enabled = false;
+            }
     }
 }
