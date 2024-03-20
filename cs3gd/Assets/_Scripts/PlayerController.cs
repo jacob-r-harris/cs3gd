@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalIn;
     private float verticalIn;
     private bool spacebar;
+    private bool leftMouse;
     private Vector3 moveDirection;
     private Rigidbody rb;
     private Animator animator;
@@ -43,8 +44,12 @@ public class PlayerController : MonoBehaviour
             rb.drag = 0;
         }
 
-        if (spacebar && !animator.GetCurrentAnimatorStateInfo(1).IsName("Roll")){
+        if (spacebar && !animator.GetCurrentAnimatorStateInfo(1).IsName("Roll") && animator.GetCurrentAnimatorStateInfo(0).IsName("walk")){
             gameObject.BroadcastMessage("roll");
+        }
+
+        if (leftMouse && !animator.GetCurrentAnimatorStateInfo(1).IsName("Attack")){
+            gameObject.BroadcastMessage("attack");
         }
 
         // Animate player
@@ -61,6 +66,7 @@ public class PlayerController : MonoBehaviour
         horizontalIn = Input.GetAxisRaw("Horizontal");
         verticalIn = Input.GetAxisRaw("Vertical");
         spacebar = Input.GetKeyDown("space");
+        leftMouse = Input.GetKeyDown("mouse 0");
     }
 
     private void movePlayer(){
@@ -76,5 +82,11 @@ public class PlayerController : MonoBehaviour
         rb.drag = rollDrag;
         moveDirection = orientation.forward * verticalIn + orientation.right * horizontalIn;
         rb.AddForce(moveDirection.normalized * moveSpeed * 100f);
+    }
+
+    private void attack()
+    {
+        rb.velocity = Vector3.zero;
+        animator.SetTrigger("attack");
     }
 }
