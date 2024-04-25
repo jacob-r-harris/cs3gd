@@ -8,6 +8,7 @@ public class HitBoxController : MonoBehaviour
     public AudioSource hurtSound;
     public float iFrames = 60;
     private float lastHit = 0;
+    public float health = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,19 @@ public class HitBoxController : MonoBehaviour
     {
         if (col.tag == "attackBox")
         {
+            Debug.Log("Hit registered");
             lastHit = Time.time;
+            health -= 1;
             hurtSound.Play();
 
             if (hitBox.enabled)
             {
                 hitBox.enabled = false;
+            }
+
+            if (health <= 0)
+            {
+                Destroy(transform.parent.gameObject);
             }
         }
     }
@@ -47,5 +55,9 @@ public class HitBoxController : MonoBehaviour
             {
                 hitBox.enabled = false;
             }
+    }
+
+    public float getHealth(){
+        return health;
     }
 }

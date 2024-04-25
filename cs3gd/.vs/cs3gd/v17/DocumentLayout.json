@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "G:\\Git Clones\\cs3gd\\cs3gd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\attackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\attackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|g:\\git clones\\cs3gd\\cs3gd\\assets\\_scripts\\hitboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\hitboxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|G:\\Git Clones\\cs3gd\\cs3gd\\assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E19A2CF-3422-901D-D83A-6677657F0AB3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,6 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AttackController.cs",
+              "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\AttackController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\AttackController.cs",
+              "ToolTip": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\AttackController.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\AttackController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA5wCAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T14:28:38.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HitBoxController.cs",
+              "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\HitBoxController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\HitBoxController.cs",
+              "ToolTip": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\HitBoxController.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\HitBoxController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T09:51:45.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AgentController.cs",
               "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\AgentController.cs",
               "RelativeDocumentMoniker": "Assets\\_Scripts\\AgentController.cs",
@@ -30,12 +64,11 @@
               "RelativeToolTip": "Assets\\_Scripts\\AgentController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T19:36:40.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-05T19:36:40.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "G:\\Git Clones\\cs3gd\\cs3gd\\Assets\\_Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\_Scripts\\PlayerController.cs",

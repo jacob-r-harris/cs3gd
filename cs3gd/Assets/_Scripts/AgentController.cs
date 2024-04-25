@@ -21,8 +21,8 @@ public class AgentController : MonoBehaviour
 	private float stopDist = 2;
 	[SerializeField]
 	private float attackDist = 7;
-	private double timeSinceLastAttack;
-	public float attackSpeed;
+	[SerializeField]
+	private float noticeDist = 15;
 
 
 	void Awake()
@@ -41,10 +41,6 @@ public class AgentController : MonoBehaviour
 
 	void Update()
 	{
-		if (animController.GetCurrentAnimatorStateInfo(1).IsName("Attack")){
-			gameObject.BroadcastMessage("attacking");
-		}
-
 		if (state == AgentState.Idle)
 			Idle ();
 		else if (state == AgentState.Patrolling)
@@ -55,15 +51,24 @@ public class AgentController : MonoBehaviour
 
 	void Chase ()
 	{
-		navMeshAgent.SetDestination(target.position);
-		animController.SetFloat("speed", navMeshAgent.velocity.magnitude);
-
-		float distanceFromTarget = Vector3.Distance(navMeshAgent.transform.position, target.position);
-
-		if (distanceFromTarget < attackDist && Time.timeAsDouble - timeSinceLastAttack >= attackSpeed)
+		if (target != null)
 		{
-			timeSinceLastAttack = Time.timeAsDouble;
-			animController.SetTrigger("attack");
+			float distanceFromTarget = Vector3.Distance(navMeshAgent.transform.position, target.position);
+
+			if (distanceFromTarget <= noticeDist)
+			{
+				navMeshAgent.SetDestination(target.position);
+				
+				animController.SetFloat("speed", navMeshAgent.velocity.magnitude);
+
+				if (distanceFromTarget < attackDist && !animController.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
+				{
+					animController.SetTrigger("attack");
+				}
+			} else {
+				animController.SetFloat ("speed", 0.0f);
+				navMeshAgent.velocity = Vector3.zero;
+			}
 		}
 	}
 

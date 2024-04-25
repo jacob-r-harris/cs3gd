@@ -44,12 +44,12 @@ public class PlayerController : MonoBehaviour
             rb.drag = 0;
         }
 
-        if (spacebar && !animator.GetCurrentAnimatorStateInfo(1).IsName("Roll") && animator.GetCurrentAnimatorStateInfo(0).IsName("walk")){
+        if (spacebar && !animator.GetCurrentAnimatorStateInfo(2).IsName("Roll") && animator.GetFloat("speed") > 0){
             gameObject.BroadcastMessage("roll");
         }
 
         if (leftMouse && !animator.GetCurrentAnimatorStateInfo(1).IsName("Attack")){
-            gameObject.BroadcastMessage("attack");
+            gameObject.BroadcastMessage("attacking");
         }
 
         // Animate player
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(moveDirection.normalized * moveSpeed * 100f);
     }
 
-    private void attack()
+    private void attacking()
     {
         rb.velocity = Vector3.zero;
         animator.SetTrigger("attack");
